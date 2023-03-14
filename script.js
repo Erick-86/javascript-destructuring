@@ -63,4 +63,11 @@ console.log(restaurantName, hours, tags);
 
 //Default value
 const { menu = [], starterMenu: starters = [] } = restaurant;
-console.log(menu, starters)
+console.log(menu, starters);
+
+//Mutating  Variables in an Object Destructuring
+let p = 11;
+let q = 99;
+const obj = { p: 23, q: 7, r: 9 };
+({ p, q } = obj)
+console.log(p, q)

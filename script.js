@@ -59,4 +59,8 @@ const {
   openingHours: hours,
   categories: tags,
 } = restaurant;
-console.log(restaurantName, hours, tags)
+console.log(restaurantName, hours, tags);
+
+//Default value
+const { menu = [], starterMenu: starters = [] } = restaurant;
+console.log(menu, starters)

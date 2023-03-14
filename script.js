@@ -38,7 +38,18 @@ const restaurant = {
   order: function (starterInd, mainInd) {
     return [this.starterMenu[starterInd], this.mainMneu[mainInd]];
   },
+
+  orderDelivery: function (obj) {
+    console.log(obj)
+  }
 };
+
+restaurant.orderDelivery({
+  time: '22:30',
+  address: 'Tema, Com 25',
+  mainInd: 2,
+  starterInd: 2,
+})
 
 let [main, , sec] = restaurant.categories;
 console.log(main, sec);

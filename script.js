@@ -20,6 +20,24 @@ const restaurant = {
   categories: ["Italian", "Pizzeria", "Vegeterian", "Organic"],
   starterMenu: ["Focaccia", "Bruschetta", "Garlic Bread", "Caprese Salad"],
   mainMneu: ["Pizza", "Pasta", "Risotto"],
+  openingHours: {
+    thu: {
+      open: 12,
+      close: 22
+    },
+    fri: {
+      open: 11,
+      close: 23
+    },
+    sat: {
+      open: 0, //opens 24hrs
+      close: 24
+    }
+  },
+
+  order: function (starterInd, mainInd ) {
+    return [this.starterMenu[starterInd], this.mainMneu[mainInd]]
+  },
 };
 
 

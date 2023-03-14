@@ -69,5 +69,11 @@ console.log(menu, starters);
 let p = 11;
 let q = 99;
 const obj = { p: 23, q: 7, r: 9 };
-({ p, q } = obj)
-console.log(p, q)
+({ p, q } = obj);
+console.log(p, q);
+
+//Destructuring Nested Objects
+const {
+  fri: { open, close },
+} = openingHours;
+console.log(open, close)

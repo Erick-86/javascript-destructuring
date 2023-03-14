@@ -2,14 +2,14 @@
 
 //Traditional way of assigning a an element in an array to a variable
 //Example
-const arr = [1, 3, 4, 5]
-const a = arr[0]
+const arr = [1, 3, 4, 5];
+const a = arr[0];
 const b = arr[1];
 const c = arr[2];
 const d = arr[3];
 
 //By destructuring (starting from ES6)
-const [e, f, g, h] = arr
+const [e, f, g, h] = arr;
 //These new variables are assigned to the their corresponding element in the arr array
 
 //Destructuring objects
@@ -23,29 +23,40 @@ const restaurant = {
   openingHours: {
     thu: {
       open: 12,
-      close: 22
+      close: 22,
     },
     fri: {
       open: 11,
-      close: 23
+      close: 23,
     },
     sat: {
       open: 0, //opens 24hrs
-      close: 24
-    }
+      close: 24,
+    },
   },
 
-  order: function (starterInd, mainInd ) {
-    return [this.starterMenu[starterInd], this.mainMneu[mainInd]]
+  order: function (starterInd, mainInd) {
+    return [this.starterMenu[starterInd], this.mainMneu[mainInd]];
   },
 };
 
+let [main, , sec] = restaurant.categories;
+console.log(main, sec);
 
-let [main, , sec] = restaurant.categories
-console.log(main, sec)
+const temp = main;
+main = sec;
+sec = temp;
+console.log(main, temp);
+console.log(restaurant.categories);
 
-const temp = main
-main = sec
-sec = temp
-console.log(main, temp)
-console.log(restaurant.categories)
+//Destructuring Th Restaurant Object
+const { name, openingHours, categories } = restaurant;
+console.log(name, openingHours, categories);
+
+//Assigning a new varaible names to the Restaurant properties
+const {
+  name: restaurantName,
+  openingHours: hours,
+  categories: tags,
+} = restaurant;
+console.log(restaurantName, hours, tags)

@@ -40,16 +40,16 @@ const restaurant = {
   },
 
   orderDelivery: function (obj) {
-    console.log(obj)
-  }
+    console.log(obj);
+  },
 };
 
 restaurant.orderDelivery({
-  time: '22:30',
-  address: 'Tema, Com 25',
+  time: "22:30",
+  address: "Tema, Com 25",
   mainInd: 2,
   starterInd: 2,
-})
+});
 
 let [main, , sec] = restaurant.categories;
 console.log(main, sec);
@@ -87,4 +87,33 @@ console.log(p, q);
 const {
   fri: { open, close },
 } = openingHours;
-console.log(open, close)
+console.log(open, close);
+
+
+//Logical Assignment Operators
+const rest1 = {
+  name: "Capri",
+  numGuests: 20,
+};
+
+const rest2 = {
+  name: "La Piazza",
+  owner: "Kofi"
+};
+//
+
+//In the OR operator, if the first value is truthy, then that value will be returned and the second value will not even be evaluated
+
+//Setting a default number of guests for all the restaurant objects
+rest2.numGuests = rest2.numGuests || 10
+rest1.numGuests = rest1.numGuests || 10
+
+//The Logical OR assignment operator (||=)
+rest1.numGuests ||= 10
+rest2.numGuests ||= 10;
+//(This is exactly as the the one)
+
+console.log(rest1)
+console.log(rest2)
+//The second object didnt have numGuest so it gets the numGuest property and is set to 10
+

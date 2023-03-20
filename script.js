@@ -93,7 +93,7 @@ console.log(open, close);
 //Logical Assignment Operators
 const rest1 = {
   name: "Capri",
-  numGuests: 20,
+  numGuests: 0,
 };
 
 const rest2 = {
@@ -105,15 +105,27 @@ const rest2 = {
 //In the OR operator, if the first value is truthy, then that value will be returned and the second value will not even be evaluated
 
 //Setting a default number of guests for all the restaurant objects
-rest2.numGuests = rest2.numGuests || 10
-rest1.numGuests = rest1.numGuests || 10
+// rest2.numGuests = rest2.numGuests || 10
+// rest1.numGuests = rest1.numGuests || 10
 
 //The Logical OR assignment operator (||=)
-rest1.numGuests ||= 10
-rest2.numGuests ||= 10;
+// rest1.numGuests ||= 10
+// rest2.numGuests ||= 10;
+
 //(This is exactly as the the one)
+//The second object didnt have numGuest so it gets the numGuest property and is set to 10
+
+//The logical nullish assignment operator (??=)
+//(null or undefined)
+
+/*
+The nullish assignment operator will assignment a value to a
+varaible if that exact variable is currently nullish
+*/
+
+rest1.numGuests ??= 10;
+rest2.numGuests ??= 10;
+
 
 console.log(rest1)
 console.log(rest2)
-//The second object didnt have numGuest so it gets the numGuest property and is set to 10
-

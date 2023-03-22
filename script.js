@@ -127,5 +127,18 @@ rest1.numGuests ??= 10;
 rest2.numGuests ??= 10;
 
 
+//The logical AND assignment operator (&&=)
+/*
+In the AND assigment operator, it short circuits when the 
+first value is falsy, and returns the falsy value
+*/
+// rest1.owner = rest1.owner && "<ANONYMOUS>"
+// rest2.owner = rest2.owner && "<ANONYMOUS>";
+
+//Or can be written
+
+rest1.owner &&= "<ANONYMOUS>";
+rest2.owner &&= "<ANONYMOUS>";
+
 console.log(rest1)
 console.log(rest2)
